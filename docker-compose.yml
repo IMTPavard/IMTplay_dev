@@ -2,16 +2,22 @@ version: "3.9"
 services:
   orchestrator:
     build: ./orchestrator
-    tty: true
+    stdin_open: true 
+    tty: true        
     ports:
       - "1000:80"
+      - "2000:22"
   webui:
     build: ./webui
-    tty: true
+    stdin_open: true 
+    tty: true 
     ports:
      - "1001:80"
+     - "2001:22"
   worker:
     build: ./worker
-    tty: true
+    stdin_open: true 
+    tty: true 
     ports:
      - "1002:80"
+     - "2002:22"
