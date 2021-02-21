@@ -17,6 +17,8 @@ RUN bash startup.sh
 
 WORKDIR /var/www/app
 RUN git clone git@github.com:IMTPavard/IMTplay-webui.git
+RUN git config --global user.email "valdimir@putin.com"
+RUN git config --global user.name "Vladimir Putin"
 
 ENTRYPOINT service ssh restart && bash
 
