@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  orchestrator:
+    build: ./orchestrator
+    tty: true
+    ports:
+      - "1000:80"
+  webui:
+    build: ./webui
+    tty: true
+    ports:
+     - "1001:80"
+  worker:
+    build: ./worker
+    tty: true
+    ports:
+     - "1002:80"
